@@ -1,102 +1,210 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <title>سایت مقالات من</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Vazirmatn', Tahoma, sans-serif;
-            background: linear-gradient(120deg, #d0f1ff 0%, #ffe6fa 100%);
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 700px;
-            margin: 40px auto;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ddd;
-            padding: 32px 24px;
-        }
-        nav {
-            text-align: right;
-            margin-bottom: 18px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #27bbb8;
-            margin-left: 18px;
-            font-weight: bold;
-            transition: color 0.1s;
-        }
-        nav a:hover {
-            color: #177;
-        }
-        h1 {
-            color: #177;
-            border-bottom: 2px solid #27bbb8;
-            padding-bottom: 10px;
-        }
-        .article {
-            margin: 32px 0;
-            background: #f5faff;
-            border-radius: 10px;
-            box-shadow: 0 3px 7px #eee;
-            padding: 18px 20px;
-            transition: box-shadow 0.25s;
-        }
-        .article:hover {
-            box-shadow: 0 8px 20px #bbe1fa;
-        }
-        .article-title {
-            font-size: 1.3em;
-            color: #27bbb8;
-            margin-bottom: 8px;
-        }
-        .article-date {
-            font-size: 0.9em;
-            color: #888;
-            margin-bottom: 14px;
-        }
-        .article-content {
-            line-height: 2;
-        }
-        .footer {
-            text-align: center;
-            color: #aaa;
-            margin-top: 36px;
-            font-size: 0.95em;
-        }
-        img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>اینترنت اشیا (IoT)؛ بررسی مفاهیم پایه تا کاربردهای امروزی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+      margin: 0; padding: 0;
+      min-height: 100vh;
+      direction: rtl;
+    }
+    nav {
+      background: rgba(0,0,0,0.70);
+      box-shadow: 0 2px 15px #0002;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      margin: 0;
+      padding: 0 16px;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      display: block;
+      padding: 16px 20px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      border-radius: 18px;
+      transition: background 0.2s;
+    }
+    nav ul li a.active, nav ul li a:hover {
+      background: linear-gradient(90deg,#ffb347,#ffcc33);
+      color: #222;
+      box-shadow: 0 2px 8px #ffdf8d80;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 42px auto 44px auto;
+      background: rgba(255,255,255,0.93);
+      border-radius: 24px;
+      box-shadow: 0 8px 40px #aaa3;
+      padding: 32px 20px 42px 20px;
+      line-height: 2.2;
+    }
+    h1 {
+      color: #157e73;
+      text-align: center;
+      font-size: 2.1em;
+      margin-top: 12px;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #234;
+      margin-top: 1.7em;
+      margin-bottom: 0.7em;
+      font-size: 1.18em;
+    }
+    h3 {
+      color: #157e73;
+      font-size: 1.1em;
+      margin-bottom: 0.1em;
+    }
+    .section-title {
+      background: #43c6ac;
+      color: #fff;
+      display: inline-block;
+      padding: 4px 18px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      font-size: 1.13em;
+    }
+    .content p, .content ul, .content ol {
+      color: #234;
+      font-size: 1.07em;
+      text-align: justify;
+      margin-bottom: 1.3em;
+    }
+    .content ul, .content ol {
+      margin-right: 1.5em;
+    }
+    .abstract, .references {
+      background: #ffe;
+      border-right: 5px solid #43c6ac;
+      border-radius: 12px;
+      padding: 13px 18px;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 12px #fffc;
+    }
+    .references li {
+      font-size: 0.99em;
+      margin-bottom: 7px;
+    }
+    @media (max-width: 700px) {
+      .container {padding:17px 5px;}
+      h1 {font-size:1.3em;}
+    }
+  </style>
 </head>
-<body dir="rtl">
-    <div class="container">
-        <nav>
-            <a href="index.html">خانه</a>
-            <a href="about.html">درباره من</a>
-            <a href="contact.html">تماس</a>
-        </nav>
-        <h1>سایت مقالات من</h1>
-        
-        <div class="article">
-            <img src="sample.jpg" alt="تصویر مقاله">
-            <div class="article-title">اولین مقاله من با عکس</div>
-            <div class="article-date">۱۴۰۳/۰۵/۰۸</div>
-            <div class="article-content">
-                این مقاله نمونه با تصویر است.<br>
-                توی سایتت هر مقاله رو می‌تونی این‌جوری زیبا نشون بدی.
-            </div>
-        </div>
-        
-        <div class="footer">
-            ساخته شده با عشق و GapGPT ♥
-        </div>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#" class="active">خانه</a></li>
+      <li><a href="#">درباره من</a></li>
+      <li><a href="#">تماس با من</a></li>
+    </ul>
+  </nav>
+
+  <div class="container content">
+    <h1>اینترنت اشیا (IoT)؛ بررسی مفاهیم پایه تا کاربردهای امروزی</h1>
+
+    <div class="abstract">
+      <strong>چکیده:</strong> <br>
+      اینترنت اشیا (IoT) یکی از مهم‌ترین فناوری‌های نوظهور دنیا است که زندگی روزمره و صنایع مختلف را دگرگون کرده است.
+      در این مقاله، مفاهیم پایه‌ای اینترنت اشیا به زبان ساده توضیح داده شده و فرایند شکل‌گیری، اجزا و نمونه‌هایی از کاربردهای آن بررسی می‌شود.
+      هدف آن است که خواننده بدون پیش‌زمینه تخصصی، بتواند نحوه کارکرد این فناوری را از ابتدا تا سطح کاربرد درک کند.
     </div>
+
+    <h2 class="section-title">مقدمه</h2>
+    <p>
+      در سال‌های اخیر، عبارت “اینترنت اشیا” زیاد به گوشمان خورده است. ولی واقعاً اینترنت اشیا چیست و چرا این‌قدر اهمیت پیدا کرده است؟
+      در اصل، اینترنت اشیا شبکه‌ای از دستگاه‌ها و وسایل مختلف است که از طریق اینترنت با هم ارتباط برقرار می‌کنند و اطلاعات را رد و بدل می‌کنند.
+      این فناوری می‌تواند همه چیز را از یخچال خانه تا دستگاه‌های صنعتی و تجهیزات پزشکی هوشمند کند.
+    </p>
+
+    <h2 class="section-title">بدنه</h2>
+
+    <h3>۱. اینترنت اشیا چیست؟</h3>
+    <p>
+      اینترنت اشیا (Internet of Things) یعنی وصل کردن اشیاء و وسایل مختلف به اینترنت به شکلی که بتوانند داده جمع‌آوری کنند و با هم ارتباط داشته باشند.
+      این وسایل می‌توانند سنسور، دستگاه الکترونیکی، اشیای ساده یا حتی خانه و ماشین باشند.
+    </p>
+
+    <h3>۲. اجزای اصلی اینترنت اشیا</h3>
+    <ul>
+      <li>
+        <strong>سنسورها و دستگاه‌ها:</strong><br>
+        هر وسیله‌ای که بتواند اطلاعات را از محیط بگیرد (مثل دماسنج، شتاب‌سنج، دوربین یا حتی چراغ هوشمند). این‌ها داده‌ها را جمع‌آوری می‌کنند.
+      </li>
+      <li>
+        <strong>اتصال یا شبکه (Connectivity):</strong><br>
+        داده‌هایی که سنسورها می‌گیرند، باید منتقل شوند. معمولاً از اینترنت، وای‌فای، بلوتوث یا شبکه موبایل برای این کار استفاده می‌شود.
+      </li>
+      <li>
+        <strong>پردازش و ذخیره‌سازی (Processing & Storage):</strong><br>
+        داده‌ها به سرورها یا «ابر» (Cloud) فرستاده می‌شوند تا پردازش شوند.
+        بعضی داده‌ها هم توسط همان دستگاه‌ها به صورت محلی پردازش می‌شوند.
+      </li>
+      <li>
+        <strong>نرم‌افزار و رابط کاربری:</strong><br>
+        آدم‌ها باید بتوانند با این سیستم‌ها کار کنند. این کار از طریق اپلیکیشن‌های موبایل یا کامپیوتر انجام می‌شود تا اطلاعات را ببینیم یا کنترل کنیم.
+      </li>
+    </ul>
+
+    <h3>۳. اینترنت اشیا چگونه کار می‌کند؟</h3>
+    <p>
+      فرض کنید یک سنسور دما را در خانه‌تان می‌گذارید:
+    </p>
+    <ol>
+      <li>سنسور دما را اندازه می‌گیرد و این داده را از طریق وای‌فای برای یک سرور می‌فرستد.</li>
+      <li>سرور بررسی می‌کند اگر دما بالا بود، بلافاصله به نرم‌افزار موبایل شما پیام می‌فرستد.</li>
+      <li>اگر بخواهید، با یک دکمه روی موبایل پنکه را روشن می‌کنید.</li>
+    </ol>
+
+    <h3>۴. کاربردهای اینترنت اشیا</h3>
+    <ul>
+      <li><strong>خانه هوشمند:</strong> لامپ‌ها، یخچال، تلویزیون و… که با گوشی کنترل می‌شوند.</li>
+      <li><strong>سلامت:</strong> دستبندهای سلامتی که ضربان قلب و فعالیت را اندازه می‌گیرند و اطلاعات آن را برای پزشک می‌فرستند.</li>
+      <li><strong>شهر هوشمند:</strong> چراغ‌های راهنمایی هوشمند، پارکینگ هوشمند و جمع‌آوری زباله اتوماتیک.</li>
+      <li><strong>کشاورزی:</strong> اندازه‌گیری رطوبت خاک یا وضعیت دام‌ها به شکل هوشمند.</li>
+      <li><strong>صنعت:</strong> پایش (مانیتورینگ) خط تولید، نگهداری پیش‌بینانه ماشین‌آلات و کنترل کیفیت.</li>
+    </ul>
+
+    <h3>۵. چالش‌ها و نگرانی‌ها</h3>
+    <p>
+      با همه فواید، اینترنت اشیا نگرانی‌هایی هم دارد؛ مهم‌ترینش امنیت و حریم خصوصی است.
+      چون دستگاه‌ها اطلاعات جمع می‌کنند و رد و بدل می‌کنند، اگر مدیریت درست نشود ممکن است این داده‌ها به دست افراد سوءاستفاده‌گر بیفتد.
+    </p>
+
+    <h2 class="section-title">نتیجه‌گیری</h2>
+    <p>
+      اینترنت اشیا فناوری‌ای است که به زبان ساده، اشیا ساده را به موجوداتی هوشمند تبدیل می‌کند که می‌توانند با هم و با انسان‌ها ارتباط بگیرند و کار زندگی را آسان‌تر و بهینه‌تر کنند.
+      البته توسعه این فناوری نیازمند توجه به امنیت، استانداردها و آموزش گسترده در جامعه است.
+    </p>
+
+    <h2 class="section-title">منابع</h2>
+    <div class="references">
+      <ul>
+        <li>Atzori, L., Iera, A., & Morabito, G. (2010). The Internet of Things: A survey. Computer Networks, 54(15), 2787-2805.</li>
+        <li>Madakam, S., Ramaswamy, R., & Tripathi, S. (2015). Internet of Things (IoT): A literature review. Journal of Computer and Communications, 3(5), 164-173.</li>
+        <li>سیدنوری، حسن. (۱۳۹۹). اینترنت اشیا و کاربردهای آن. انتشارات دانشگاه تهران.</li>
+        <li>Al-Fuqaha, A., Guizani, M., Mohammadi, M., Aledhari, M., & Ayyash, M. (2015). Internet of Things: A Survey on Enabling Technologies, Protocols, and Applications. IEEE Communications Surveys & Tutorials, 17(4), 2347-2376.</li>
+      </ul>
+    </div>
+
+  </div>
 </body>
 </html>
